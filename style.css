@@ -1,0 +1,43 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #007bc4;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Thay đổi thuộc tính grid-row cho .item1 theo các bước yêu cầu */
+.item1 {
+    grid-row: 1 / 3; /* Ô 1 bắt đầu từ hàng 1 đến đường kẻ hàng 3 (chiếm 2 hàng) */
+    background-color: lightcoral; /* Đổi màu để dễ nhận biết ô được can thiệp */
+}
